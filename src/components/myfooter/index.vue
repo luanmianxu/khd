@@ -2,14 +2,14 @@
   <div id="myfooter">
     <div class="hd">
       <nav>
-        <router-link to="">关于我们</router-link>
+        <router-link to="/about">关于我们</router-link>
         <router-link to="">咨询服务</router-link>
-        <router-link to="">合租伙伴查询</router-link>
-        <router-link to="">服务条款</router-link>
+        <router-link to="/partner">合租伙伴查询</router-link>
+        <router-link to="/terms">服务条款</router-link>
         <router-link to="">隐藏政策</router-link>
-        <router-link to="">服务中心</router-link>
+        <router-link to="/serviceCenter">服务中心</router-link>
         <router-link to="">招聘信息</router-link>
-        <router-link to="">全球的</router-link>
+        <router-link to="/global">全球的</router-link>
       </nav>
     </div>
     <div class="bd">
