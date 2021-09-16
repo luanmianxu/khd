@@ -31,13 +31,5 @@ const dlj = [
             sm: '服务条款'
         }
     },
-    {
-        path: '/serviceCenter',
-        name: 'ServiceCenter',
-        component: () => import('@/views/dlj/serviceCenter.vue'),
-        meta: {
-            sm: '服务中心'
-        }
-    },
 ]
 export default dlj
