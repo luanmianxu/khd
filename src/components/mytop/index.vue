@@ -170,9 +170,11 @@ export default {
     height: 300px;
     width: 100%;
     background: #fff;
+    border: 1px solid #000;
     a {
       margin: 0 10px;
       border: 1px solid #000;
+      background: #fff;
     }
   }
 }
