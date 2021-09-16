@@ -167,6 +167,7 @@ export default {
   }
   .drop_down_box {
     position: absolute;
+    z-index: 99;
     height: 300px;
     width: 100%;
     background: #fff;
