@@ -17,15 +17,16 @@
       <section class="nav_box">
         <nav class="lf">
           <!-- 一级标题 -->
-          <a
-            href="javaScript:;"
+          <router-link
+            to="/primary"
             v-for="(item, index) in oneeLevelData"
             :key="index"
             @mouseenter="ontwoLevel(item)"
             @mouseout="onmouseout"
+            @click.native="onclick(item)"
           >
             {{ item }}
-          </a>
+          </router-link>
         </nav>
         <nav class="rt">
           <router-link to="">POP</router-link>
@@ -55,7 +56,8 @@
 <script>
 import oneLevel from "@/api/oneLevel.js";
 import twoLevel from "@/api/twoLevel.js";
-
+// 获取一级品类下商品
+import getproduct from "@/api/getproduct.js"
 export default {
   name: "Mytop",
   data() {
@@ -91,6 +93,16 @@ export default {
     onmouseenter() {
       this.isShow = true;
     },
+    //点击进入primary路由
+    onclick(item){
+      getproduct(item,1).then(r=>{
+        let obj ={}
+        obj.title=item
+        obj.data=r
+       this.$store.dispatch('SETPRIMARYDATA',obj)
+     
+      })
+    }
   },
 };
 </script>
